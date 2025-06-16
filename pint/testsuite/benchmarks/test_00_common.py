@@ -19,4 +19,4 @@ def import_pint():
 
 
 def test_import(benchmark):
-    benchmark.pedantic(import_pint, iterations=1, rounds=10)
+    benchmark(import_pint)
