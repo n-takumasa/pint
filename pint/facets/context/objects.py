@@ -19,6 +19,7 @@ from ...util import UnitsContainer, to_units_container
 from .definitions import ContextDefinition
 
 if TYPE_CHECKING:
+    from ..._typing import UnitLike
     from ...registry import UnitRegistry
 
 
@@ -27,8 +28,6 @@ class Transformation(Protocol):
         self, ureg: UnitRegistry, value: PlainQuantity, **kwargs: Any
     ) -> PlainQuantity: ...
 
-
-from ..._typing import UnitLike
 
 ToBaseFunc = Callable[[UnitsContainer], UnitsContainer]
 SrcDst = tuple[UnitsContainer, UnitsContainer]

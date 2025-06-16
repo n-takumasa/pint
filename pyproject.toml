@@ -102,6 +102,13 @@ docstring-code-format = true
 
 [tool.ruff.lint]
 extend-select = ["I"]
+extend-ignore = [
+  "E731", # lambda-assignment
+]
+[tool.ruff.lint.extend-per-file-ignores]
+"*.ipynb" = [
+  "E402", # module-import-not-at-top-of-file
+]
 
 [tool.pixi.project]
 channels = ["https://fast.prefix.dev/conda-forge"]
